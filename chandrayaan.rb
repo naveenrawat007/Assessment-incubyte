@@ -61,4 +61,30 @@ class Chandrayaan3
     end
   end
 
+	def turn_left
+    case @direction
+    when 'N'
+      @direction = 'W'
+    when 'S'
+      @direction = 'E'
+    when 'E'
+      @direction = 'N'
+    when 'W'
+      @direction = 'S'
+    end
+  end
+
+  def turn_right
+    case @direction
+    when 'N'
+      @direction = 'E'
+    when 'S'
+      @direction = 'W'
+    when 'E'
+      @direction = 'S'
+    when 'W'
+      @direction = 'N'
+    end
+  end
+
 end
