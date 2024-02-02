@@ -1,7 +1,3 @@
-# Use this command to initialize the Chandrayan3 class obj and run execute method
-# --> chadrayan = Chandrayaan3.new(0,0,0,'N')
-# --> chadrayan.execute_commands(['f', 'r', 'u', 'b', 'l'])
-
 class Chandrayaan3
 	attr_accessor :position, :direction
 
@@ -112,3 +108,7 @@ class Chandrayaan3
   end
 
 end
+
+# Use this command to initialize the Chandrayan3 class obj and run execute method
+chadrayan = Chandrayaan3.new(0,0,0,'N')
+chadrayan.execute_commands(['f', 'r', 'u', 'b', 'l'])
