@@ -1,3 +1,7 @@
+# Use this command to initialize the Chandrayan3 class obj and run execute method
+# --> chadrayan = Chandrayaan3.new(0,0,0,'N')
+# --> chadrayan.execute_commands(['f', 'r', 'u', 'b', 'l'])
+
 class Chandrayaan3
 	attr_accessor :position, :direction
 
@@ -23,6 +27,10 @@ class Chandrayaan3
 				turn_down
 			end
 		end
+
+		print "Final position is : #{@position}"
+		print "\nFinal direction is : #{@direction}"
+
 	end
 
 	private
@@ -37,9 +45,9 @@ class Chandrayaan3
       @position[0] += 1
     when 'W'
       @position[0] -= 1
-    when 'Up'
+    when 'U'
       @position[2] += 1
-    when 'Down'
+    when 'D'
       @position[2] -= 1
     end
   end
@@ -54,9 +62,9 @@ class Chandrayaan3
       @position[0] -= 1
     when 'W'
       @position[0] += 1
-    when 'Up'
+    when 'U'
       @position[2] -= 1
-    when 'Down'
+    when 'D'
       @position[2] += 1
     end
   end
@@ -71,6 +79,10 @@ class Chandrayaan3
       @direction = 'N'
     when 'W'
       @direction = 'S'
+		when 'U'
+      @direction = 'N'
+    when 'D'
+      @direction = 'S'
     end
   end
 
@@ -84,7 +96,19 @@ class Chandrayaan3
       @direction = 'S'
     when 'W'
       @direction = 'N'
+		when 'U'
+      @direction = 'S'
+    when 'D'
+      @direction = 'N'
     end
+  end
+
+	def turn_up
+    @direction = 'U'
+  end
+
+  def turn_down
+    @direction = 'D'
   end
 
 end
